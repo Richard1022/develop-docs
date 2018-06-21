@@ -17,11 +17,11 @@
 boolean|is/has+描述
 ---
 ### 常量
-命名方式： 全部大写
+命名方式： 全部大写  
 命名规范： _下划线来分隔单词
 ---
 ### 函数
-命名方式： 小驼峰命名法 `eg:构造函数首字母大写`
+命名方式： 小驼峰命名法 `eg:构造函数首字母大写`  
 命名规则：前缀+描述 `eg:前缀为动词`
 * can `判断是否可执行某个动作`
 * has `判断是否含有某个值`
@@ -53,6 +53,27 @@ boolean|is/has+描述
 * css选择器中避免使用标签名`从结构、表现、行为分离的原则来看，应该尽量避免css中出现HTML标签，并且在css选择器中出现标签名会存在潜在的问题。`
 * 使用子选择器
 * 0后面不带单位
+* 常见class命名关键词：
+布局类：header, footer, container, main, content, aside, page, section
+包裹类：wrap, inner
+区块类：region, block, box
+结构类：hd, bd, ft, top, bottom, left, right, middle, col, row, grid, span
+列表类：list, item, field
+主次类：primary, secondary, sub, minor
+大小类：s, m, l, xl, large, small
+状态类：active, current, checked, hover, fail, success, warn, error, on, off
+导航类：nav, prev, next, breadcrumb, forward, back, indicator, paging, first, last
+交互类：tips, alert, modal, pop, panel, tabs, accordion, slide, scroll, overlay,
+星级类：rate, star
+分割类：group, seperate, divider
+等分类：full, half, third, quarter
+表格类：table, tr, td, cell, row
+图片类：img, thumbnail, original, album, gallery
+语言类：cn, en
+论坛类：forum, bbs, topic, post
+方向类：up, down, left, right
+其他语义类：btn, close, ok, cancel, switch; link, title, info, intro, more, icon; form, label, search, contact, phone, date, email, user; view, loading...
+
 
 
 
