@@ -25,10 +25,22 @@
 ### Git分支与版本发布规范
 * 基本原则：master为保护分支，不直接在master上进行代码修改和提交。
 * 开发日常需求或者项目时，从master分支上checkout一个feature分支进行开发或者bugfix分支进行bug修复，功能测试完毕并且项目发布上线后，`将feature分支合并到主干master，并且打Tag发布，最后删除开发分支`。分支命名规范：
-  * 分支版本命名规则：分支类型  分支发布时间  分支功能。比如：feature_20170401_fairy_flower
-  * 分支类型包括：`feature`、`bugfix`、`refactor`三种类型，即新功能开发、bug修复和代码重构
-  * 时间使用年月日进行命名，不足2位补0
-  * 分支功能命名使用snake case命名法，即下划线命名。
+* develop 分支
+> develop 为开发分支，始终保持最新完成以及bug修复后的代码  
+> 一般开发的新功能时，feature分支都是基于develop分支下创建的
+* feature 分支
+> develop 为开发分支，始终保持最新完成以及bug修复后的代码  
+> 一般开发的新功能时，feature分支都是基于develop分支下创建的
+* release 分支
+> release 为预上线分支，发布提测阶段，会release分支代码为基准提测
+```
+  当有一组feature开发完成，首先会合并到develop分支，进入提测时，会创建release分支。
+如果测试过程中若存在bug需要修复，则直接由开发者在release分支修复并提交。
+当测试完成之后，合并release分支到master和develop分支，此时master为最新代码，用作上线。
+```
+* develop 分支
+> develop 为开发分支，始终保持最新完成以及bug修复后的代码  
+> 一般开发的新功能时，feature分支都是基于develop分支下创建的
 
 
 * Tag包括3位版本，前缀使用v。比如v1.2.31。Tag命名规范：

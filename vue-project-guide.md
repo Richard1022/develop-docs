@@ -92,5 +92,59 @@ vue-web 部署目录
 * 带引号的特性值
 > 非空 HTML 特性值应该始终带引号 (单引号或双引号，选你 JS 里不用的那个)。
 
+### 组件实例顺序
+```
+全局感知 (要求组件以外的知识)
+
+name
+parent
+1. 组件类型 (更改组件的类型)
+
+functional
+2. 模板修改器 (改变模板的编译方式)
+
+delimiters
+comments
+3. 模板依赖 (模板内使用的资源)
+
+components
+directives
+filters
+4. 组合 (向选项里合并属性)
+
+extends
+mixins
+5. 接口 (组件的接口)
+
+inheritAttrs
+model
+props/propsData
+6. 本地状态 (本地的响应式属性)
+
+data
+computed
+7. 事件 (通过响应式事件触发的回调)
+
+watch
+8. 生命周期钩子 (按照它们被调用的顺序)
+beforeCreate
+created
+beforeMount
+mounted
+beforeUpdate
+updated
+activated
+deactivated
+beforeDestroy
+destroyed
+非响应式的属性 (不依赖响应系统的实例属性)
+
+9. methods
+渲染 (组件输出的声明式描述)
+
+template/render
+renderError
+```
+
 
 
